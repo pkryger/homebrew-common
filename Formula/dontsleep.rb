@@ -4,16 +4,13 @@ class Dontsleep < Formula
   version "0.0.1"
   sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 
-  depends_on "watch"
-
   def install
     (bin/"dontsleep").write <<~eos
         #!/bin/bash
 
-        cmd="caffeinate -dis watch pmset -g"
+        cmd="caffeinate -dist 86400"
 
-        ps aux | grep -e "\\d ${cmd}$" | grep -v grep \\
-            ||${cmd}
+        ps aux | grep -e "\\d ${cmd}$" | grep -v grep || ${cmd}
     eos
   end
 
