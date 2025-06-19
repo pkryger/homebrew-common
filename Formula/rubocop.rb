@@ -1,9 +1,9 @@
 class Rubocop < Formula
-  desc "Ruby static code analyzer (a.k.a. linter) and code formatter."
+  desc "Ruby static code analyzer (a.k.a. linter) and code formatter"
   homepage "https://github.com/rubocop/rubocop"
+  license "MIT License"
   head "https://github.com/rubocop/rubocop.git",
     branch: "master"
-  license "MIT License"
 
   depends_on "ruby"
 
