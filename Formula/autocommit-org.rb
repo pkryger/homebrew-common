@@ -12,7 +12,7 @@ class AutocommitOrg < Formula
       cd ~/org
       git pull
       git add -A
-      git commit -m "Automatic push"
+      git commit -m "[automatic commit]" || exit 0
       git push
     EOS
   end
