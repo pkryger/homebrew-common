@@ -18,8 +18,8 @@ class Dontsleep < Formula
     run [opt_bin/"dontsleep"]
     environment_variables PATH: std_service_path_env,
                           TERM: "xterm"
-    log_path "/tmp/dont.sleep"
-    error_log_path "/tmp/dont.sleep"
+    log_path "/tmp/dont-sleep"
+    error_log_path "/tmp/dont-sleep"
     run_type :interval
     interval 300
   end
