@@ -21,8 +21,8 @@ class AutocommitOrg < Formula
     run [opt_bin/"autocommit-org"]
     environment_variables PATH: std_service_path_env,
                           TERM: "xterm"
-    log_path "/tmp/autocommit-org.sleep"
-    error_log_path "/tmp/autocommit-org.sleep"
+    log_path "/tmp/autocommit-org"
+    error_log_path "/tmp/autocommit-org"
     run_type :interval
     interval 3600
   end
