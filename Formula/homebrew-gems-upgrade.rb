@@ -29,8 +29,9 @@ class HomebrewGemsUpgrade < Formula
 
   service do
     run [opt_bin/"homebrew-gems-upgrade"]
-    environment_variables PATH: std_service_path_env,
-                          TERM: "xterm"
+    environment_variables PATH:            std_service_path_env,
+                          TERM:            "xterm",
+                          HOMEBREW_PREFIX: HOMEBREW_PREFIX
     log_path "/tmp/homebrew-gems-upgrade"
     error_log_path "/tmp/homebrew-gems-upgrade"
     run_type :interval
