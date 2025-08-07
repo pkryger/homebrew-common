@@ -13,6 +13,7 @@ class HomebrewGemsUpgrade < Formula
 
       envrc_file=$(brew --prefix)/Library/.envrc
       if [[ -f "${envrc_file}" ]]; then
+          direnv exec "$(brew --prefix)/Library" bundle update --bundler"
           direnv exec "$(brew --prefix)/Library" bundle install --gemfile "$(brew --prefix)/Library/Homebrew/Gemfile"
       else
           >&2 echo "Missing ${envrc_file} - install from https://github.com/pkryger/dotfiles"
